@@ -5,10 +5,7 @@
   <%= @photo.title %>
 </p>
 
-<p>
-  <%# <strong>Url:</strong> %>
-  <img src="<%= @photo.url %>">
-</p>
+<%= image_tag @photo.image, width: '300' %>
 
 <p>
   <%# <strong>User:</strong> %>
