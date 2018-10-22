@@ -9,7 +9,7 @@
   <%# <strong>Url:</strong> %>
   <img src="<%= @photo.url %>">
 </p>
-
+<%= image_tag @product.url, width: '300' %>
 <p>
   <%# <strong>User:</strong> %>
   <%= @photo.user.email %>
