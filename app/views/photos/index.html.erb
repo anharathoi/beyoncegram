@@ -8,9 +8,11 @@
   <tbody>
   <p><%= link_to 'Add New Photo', new_photo_path %></p>
   <br>
+  
     <% @photos.each do |photo| %>
       <div>
         <img src="<%= photo.url%>" width=400>
+        
         <hr>
         <%= photo.title %>
         <br>
@@ -18,8 +20,8 @@
         </div>
         <p><%= link_to 'Show', photo %></p>
         <% if photo.user.email == current_user.email  %></p>
-        <p><%= link_to 'Edit', edit_photo_path(photo) %></p>
-        <p><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <p><%= link_to 'Edit', edit_photo_path(photo) %></p>
+          <p><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
     <% end %>
   </tbody>
